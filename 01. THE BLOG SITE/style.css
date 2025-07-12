@@ -5,6 +5,10 @@
     --main-black: rgb(20, 18, 18); 
     --text-color: rgb(91, 91, 91);
     --main-white: #ffffff;
+    --grid-color1: #e85ba8;
+    --grid-color2: #5404a3;
+    --grid-color3: #90e6bb;
+    --grid-color4: #cea6ff;
 
 }
 *{
@@ -33,7 +37,7 @@ body{
     font-weight: 400;
 }
 
-.nav-link-container ul {
+.nav-link-conatiner ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,20 +45,20 @@ body{
     gap: 10px;
 }
 
-.nav-link-container ul li{
+.nav-link-conatiner ul li{
     padding: 14px 17px;
     border-radius: 16px;
     transition: all 0.3s ease;
 }
 
 /* ------------ transition -----------------  */
-.nav-link-container ul li:hover{
+.nav-link-conatiner ul li:hover{
     box-shadow: 2px 2px 20px var(--text-color); /*For adding shodown in x-axis, y-axis, spread etc*/
     background-color: var(--main-black);
     transform: scale(1.1); /*This will up-lift the element on hover*/
 }
 
-.nav-link-container ul li a{
+.nav-link-conatiner ul li a{
     color: var(--main-black);
     text-decoration: none;
     font-size: 15px;
@@ -67,7 +71,7 @@ body{
 }
 
 
-.button-group{
+.button-group1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,13 +105,13 @@ body{
 }
 
 /* ------------------------------------- page 1 -------------------------------  */
-.page1-container{
+.page1-conatiner{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content-page1-container{
+.content-page1-contianer{
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -116,4 +120,386 @@ body{
     height: 100vh;
     width: 1500px;
     background-position: center; /*This will focus on center of the */
+    background-size: cover;
+    margin: 4px 40px;
+    border-radius: 50px;
 }
+
+.content1-1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    top: 0px; /*This is done as to align items to the end*/
+    bottom: 130px;
+    cursor: context-menu; /*A cursor type*/
+    left: 90px;
+}
+
+.sub-heading1{
+    font-size: 25px;
+    color: var(--main-white);
+}
+
+.page1-heading{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: var(--main-white);
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.para-content-1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: var(--main-white);
+    margin-top: 20px;
+}
+
+.button1-1{
+    position: relative;
+    bottom: 100px;
+    left: 1100px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 90px;
+    color: var(--main-white);
+    transition: all 0.3s ease;
+}
+
+.button1-1:hover{
+    transform: scale(1.8);
+    color: orangered;
+}
+
+/* ---------------------------- page 2 --------------------------  */
+.page2-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 10px 46px;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.heading2{
+    font-size: 25px;
+    text-align: start;
+    /* margin-left: 40px; */
+}
+
+.card-img{
+    height: 260px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.card-img:hover{
+    transform: translateY(-20px);
+}
+
+.profile-img{
+    height: 40px;
+    border-radius: 30px;
+}
+.page2-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page2-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+}
+
+.page2-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 430px;
+    border-radius: 30px;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.page2-card:hover{
+    transform: scale(1.04);
+}
+
+.card-middle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* padding: 4px 0px; */
+    margin-left: 10px;
+}
+
+.card-heading{
+    font-size: 20px;
+    font-weight: 580;
+}
+
+.card-para-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-top: 7px;
+}
+
+.card-lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    gap: 100px;
+}
+
+.lower-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.button2{
+    padding: 14px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    background-color: var(--main-black);
+    color: var(--main-white);
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------------------ page 3 ---------------------------------------------  */
+.page3-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 0px;
+}
+
+.heading3{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+/*Use of grid template*/
+.page3-grid{
+    height: 70vh;
+    padding: 0px 80px;
+    display: grid;
+    grid-template-areas: 
+        "box1 box2 box4"
+        "box3 box3 box4";
+}
+
+.box-container {
+    background-color: beige;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.box-container:hover{
+    justify-content: flex-start;
+}
+
+#box1 {
+    grid-area: box1;
+    background-image: url(Assets/last\ grid\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#box1:hover{
+    transform: translateX(-30px);
+}
+#box2 {
+    grid-area: box2;
+    background-image: url(Assets/last\ grid\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+#box2:hover{
+    transform: translateY(-30px);
+}
+
+#box3-long {
+    grid-area: box3;
+    background-image: url(Assets/last\ grid\ 4.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#box3-long:hover{
+    transform: translateY(30px);
+}
+
+#box4-last {
+    grid-area: box4;
+    background-image: url(Assets/last\ grid\ 3.jpg);
+    background-size: cover;
+    gap: 230px;
+}
+
+#box4-last:hover{
+    transform: translateX(30px);
+}
+
+#h1{
+    color: #f91492;
+}
+
+#h2{
+    color: #f9e214;
+}
+
+#h3{
+    color: #f91414;
+}
+
+#h4{
+    color: #126dff;
+}
+
+#p4{
+    margin-bottom: 280px;
+
+}
+
+.box-heading{
+    font-size: 40px;
+    color: #fb2525;
+    font-weight: 600;
+}
+
+.box-brief{
+    font-size: 16px;
+    color: var(--main-white);
+}
+
+/* --------------------------------------- footer ----------------------------------------  */
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 10px 20px 20px;
+    background-color: var(--main-black);
+    padding: 40px 20px;
+    border-radius: 30px;
+}  
+
+.upper-heading{
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-heading{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--main-white);
+}
+
+.footer-sub-heading{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.button-footer-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.footer2{
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--main-white);
+    transition: all 0.3s ease;
+}
+
+.footer2:hover{
+    background-color: #c8c8c8;
+    transform: scale(1.1);
+}
+
+.main-footer-columns{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 60px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.cl1 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cl1 ul li{
+    transition: all 0.3s ease;
+    /* padding: 13px 18px;
+    border-radius: 15px; */
+}
+
+.cl1 ul li:hover{
+    /* border: 2px solid var(--main-white); */
+    transform: scale(1.2);
+}
+
+.cl1 ul li a{
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.cl1 ul li a:hover{
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------- code ends here -----------------------------------------  */
