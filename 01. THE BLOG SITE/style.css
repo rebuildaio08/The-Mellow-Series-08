@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic&display=swap');
+
+
+:root{
+    --main-black: rgb(20, 18, 18); 
+    --text-color: rgb(91, 91, 91);
+    --main-white: #ffffff;
+
+}
+*{
+    font-family: "Special Gothic", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    text-align: center;
+}
+
+/* ---------------------------------- navbar --------------------  */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 27px;
+    background: var(--main-white);
+}
+
+.logo{
+    font-size: 26px;
+    color: var(--main-black);
+    font-weight: 400;
+}
+
+.nav-link-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; /*This change the listing style of ul*/
+    gap: 10px;
+}
+
+.nav-link-container ul li{
+    padding: 14px 17px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+/* ------------ transition -----------------  */
+.nav-link-container ul li:hover{
+    box-shadow: 2px 2px 20px var(--text-color); /*For adding shodown in x-axis, y-axis, spread etc*/
+    background-color: var(--main-black);
+    transform: scale(1.1); /*This will up-lift the element on hover*/
+}
+
+.nav-link-container ul li a{
+    color: var(--main-black);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* ----------------------- transition ------------------------  */
+.nav-link-container ul li a{
+    color: var(--main-white);
+}
+
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.button1{
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+/*This will all these properties to both login & signup button*/
+/*Then we will add individual changes by using their id names*/
+
+#signup{
+    background-color: lightgray;
+}
+
+#signup:hover{
+    transform: scale(1.1);
+}
+
+#login{
+    background-color: var(--main-black);
+    color: var(--main-white);
+}
+#login:hover{
+    transform: scale(1.1);
+}
+
+/* ------------------------------------- page 1 -------------------------------  */
+.page1-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-page1-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    background-image: url(Assets/Main\ background.jpg);
+    height: 100vh;
+    width: 1500px;
+    background-position: center; /*This will focus on center of the */
+}
