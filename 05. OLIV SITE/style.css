@@ -1,0 +1,719 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root{
+    --main-background: #ffffff;
+    --background-black: black;
+    --para-color: rgb(71, 71, 71);
+    --light-pink: #ff8bd8;
+}
+
+body{
+    text-align: center;
+}
+
+/* ----------------------------- header ----------------------------------  */
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+/* -------------------------------- navbar -----------------------------  */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    align-items: center;
+    padding: 15px;
+}
+
+.part1, /*If both classes contians same property so you can apply or write in this way as well.*/
+.part2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.part2{
+    align-items: center;
+    gap: 30px;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.badge{
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 7px 9px;
+    border-radius: 30px;
+    background-color: var(--light-pink);
+}
+
+.nav-link-container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link-container ul li{
+    list-style-type: none;
+}
+
+.nav-link-container ul li a{
+    text-decoration: none;
+    color: var(--background-black);
+}
+
+.nav-link-container ul li a:hover{
+    text-decoration: underline;
+    color: var(--light-pink);
+}
+
+.letstalk{
+    font-size: 17px;
+    padding: 8px 10px;
+    background-color: var(--main-background);
+    border-radius: 40px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+    position: relative; /*This is because for applying abosolute property in the duplicated one (in simple)*/
+    overflow: hidden; /*Hidding the overflowed part of the duplicated element during transition.*/
+    z-index: 9; /*As to make this element upon the duplicate one.*/
+}
+
+/*Making duplicate*/
+.letstalk::after{
+    content: " "; /*Inside content will be none ex - let's talk in it's original element*/
+    position: absolute; /*For coving the parent element*/
+    height: 100%;/*Taking height and width of the parent element*/
+    width: 100%;
+    background-color: var(--main-background); /*You can see it by changing its background color*/
+    bottom: 104%; /*Making it out from the parent shadow for visibility.*/
+    left: 0; /*For perfect fit*/
+    border-radius: 40px;
+    transition: all 0.1s linear;
+}
+
+.letstalk:hover{
+    color: var(--main-background); /*For making text or content visible after the transition*/
+}
+.letstalk:hover::after{
+    bottom: 0;
+    border-radius: 20px;
+    z-index: -1;
+    background-color: var(--background-black);
+}
+/*What happens when we over it!*/
+
+
+/* ------------------------ page 1 --------------------------  */
+
+.page1-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 150px;
+}
+
+.page1-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.page1-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 38px;
+}
+
+.heading1{
+    font-weight: 400;
+    color: var(--background-black);
+}
+
+.page1-para{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+    margin-left: 10px;
+    color: var(--para-color);
+}
+
+.page1-button{
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 12px 14px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 30px;
+    background-color: var(--background-black);
+    color: var(--main-background);
+    transition: all 0.3s ease;
+}
+
+.page1-button.page1-button:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 6px black;
+}
+
+/* ----------------------- brand line up --------------------------  */
+
+.brand-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 90px 10px 25px;
+    cursor: pointer;
+}
+
+.brand-name{
+    font-size: 36px;
+}
+/* ---------------------------------- page 2 ------------------------  */
+
+
+.page2-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.testimonial-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* width: 1300px; */
+    grid-gap: 20px;
+}
+
+.testimonial{
+    /* border: 2px solid black; */
+    padding: 20px 25px;
+    width: 230px;
+    border-radius: 6px;
+    background-color: rgb(242, 239, 239);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover{
+    transform: scale(1.06);
+}
+
+.heading{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.testimonial-para{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--para-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button-testimonial{
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--main-background);
+    overflow: hidden;
+    z-index: 9;
+    position: relative;
+    transition: all 0.1s ease;
+    font-size: 16px;
+}
+
+.button-testimonial:hover{
+    color: var(--main-background);
+}
+
+.button-testimonial::after{
+    content: " ";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 104%;
+    transition: all 0.1s linear;
+}
+
+.button-testimonial:hover::after{
+    z-index: -1;
+    top: 0;
+}
+
+#testimonial1{
+    background-color: #fac0e7;
+}
+
+#testimonial2{
+    background-color: #cdc0fa;
+}
+#testimonial3{
+    background-color: #fac0c4;
+}
+#testimonial4{
+    background-color: #c0e7fa;
+}
+#testimonial5{
+    background-color: #c0fad5;
+}
+
+/* -------------------------------- page 3 -------------------------  */
+
+.page3-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 30px;
+}
+
+.short-heading{
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.page3-bar-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.heading3{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.bar-button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--background-black);
+    color: var(--main-background);
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.bar-button:hover{
+    transform: scale(1.1);
+}
+
+.product-grid-section{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.product-grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+
+
+.empty-box{
+    height: 670px;
+    width: 730px;
+    background-size: cover;
+}
+
+#product1{
+    background-image: url(ASSETS/product\ 1\ img.jpg);
+    background-position: bottom;
+}
+
+#product2{
+    background-image: url(ASSETS/product\ 5\ img\ \(2\).jpg);
+}
+
+#product3{
+    background-image: url(ASSETS/product\ 3\ img.jpg);
+}
+
+#product4{
+    background-image: url(ASSETS/product\ 2\ img.jpg);
+    background-position: bottom;
+}
+
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.item-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name{
+    font-size: 22px;
+}
+
+.item-button{
+    font-size: 17px;
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--background-black);
+    color: var(--main-background);
+    transition: all 0.3s ease;
+}
+
+.item-button:hover{
+    background-color: var(--main-background);
+    color: var(--background-black);
+    border: 1px solid black;
+    transform: scale(1.1);
+}
+
+/* -------------------------------- page 4------------------------ */
+
+.page4-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 97%;
+    padding: 0px 20px;
+}
+
+.heading-part4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.short-heading4{
+    font-size: 19px;
+}
+
+.heading4{
+    font-size: 47px;
+}
+
+.box{
+    transition: all 0.3s ease;
+}
+
+.box:hover{
+    transform: scale(0.93);
+}
+
+.grid-gallery {
+    margin-top: 30px;
+    height: 200vh;
+    width: 100%;
+    padding: 10px 0px;
+    display: grid;
+    grid-template-areas: 
+        "box1 box1 box2 box3"
+        "box1 box1 box4 box5"
+        "box6 box7 box10 box10"
+        "box8 box9 box10 box10"
+        "box11 box11 box12 box13"
+        "box11 box11 box14 box15";
+    grid-template-columns: (6,1fr);
+    grid-template-rows: (4, 1fr);
+    gap: 10px;
+}
+
+/* Basic styling for demonstration */
+.grid-gallery > div {
+    background-position: center;
+    background-size: cover;
+}
+
+
+#box1{
+    background-image: url(ASSETS/grid\ 1.jpg);
+}
+
+#box2{
+    background-image: url(ASSETS/grid\ 2.jpg);
+}
+#box3{
+    background-image: url(ASSETS/grid\ 3.jpg);
+}
+#box4{
+    background-image: url(ASSETS/grid\ 4.jpg);
+}
+#box5{
+    background-image: url(ASSETS/grid\ 5.jpg);
+}
+#box6{
+    background-image: url(ASSETS/grid\ 6.jpg);
+}
+#box7{
+    background-image: url(ASSETS/grid\ 7.jpg);
+}
+#box8{
+    background-image: url(ASSETS/grid\ 8.jpg);
+}
+#box9{
+    background-image: url(ASSETS/grid\ 9.jpg);
+}
+#box10{
+    background-image: url(ASSETS/grid\ 10.jpg);
+}
+#box11{
+    background-image: url(ASSETS/grid\ 11.jpg);
+}
+#box12{
+    background-image: url(ASSETS/grid\ 12.jpg);
+}
+#box13{
+    background-image: url(ASSETS/grid\ 13.jpg);
+}
+#box14{
+    background-image: url(ASSETS/grid\ 14.jpg);
+}
+#box15{
+    background-image: url(ASSETS/grid\ 15.jpg);
+}
+
+/* ---------------------------- profile -------------------------  */
+
+.profile-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.profile-heading-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 46px;
+    padding-right: 70%;
+}
+
+.profile-grid{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.profile-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
+    transition: all 0.3s ease;
+    margin: 4px;
+    gap: 15px;
+
+}
+.profile-card:hover{
+    transform: scale(1.06);
+}
+
+.empty-img-profile{
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}
+
+#profile1{
+    background-image: url(ASSETS/profile\ 1.jpg);
+}
+
+#profile2{
+    background-image: url(ASSETS/profile\ 2.jpg);
+}
+
+#profile3{
+    background-image: url(ASSETS/product\ 3\ img.jpg);
+}
+
+#profile4{
+    background-image: url(ASSETS/profile\ 4.jpg);
+}
+
+#profile5{
+    background-image: url(ASSETS/profile\ 5.jpg);
+}
+
+#profile6{
+    background-image: url(ASSETS/profile\ 6.jpg);
+}
+
+#profile7{
+    background-image: url(ASSETS/profile\ 7.jpg);
+}
+
+#profile8{
+    background-image: url(ASSETS/profile\ 8.jpg);
+}
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 15px;
+    background-color: #efedf7;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 90%;
+}
+
+.profile-content:hover{
+    transform: scale(1.08);
+}
+
+.profile-heading{
+    font-size: 21px;
+    font-weight: 500;
+    
+}
+
+.profile-para-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--para-color);
+    font-size: 14px;
+    cursor: none;
+}
+
+.read-article-button{
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.read-article-button:hover{
+    text-decoration: underline;
+}
+
+/* --------------------------------------- footer ----------------------------------------  */
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 10px 20px 20px;
+    background-color: var(--background-black);
+    padding: 40px 20px;
+    border-radius: 20px;
+}  
+
+.upper-heading{
+    color: var(--main-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-heading{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--main-background);
+}
+
+.footer-sub-heading{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.button-footer-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.footer2{
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--main-background);
+    transition: all 0.3s ease;
+}
+
+.footer2:hover{
+    background-color: #c8c8c8;
+    transform: scale(1.1);
+}
+
+.main-footer-columns{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 60px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.cl1 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cl1 ul li{
+    transition: all 0.3s ease;
+}
+
+.cl1 ul li:hover{
+    transform: scale(1.2);
+}
+
+.cl1 ul li a{
+    text-decoration: none;
+    color: var(--main-background);
+}
+
+.cl1 ul li a:hover{
+    text-decoration: underline;
+}
